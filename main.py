@@ -19,6 +19,8 @@ df = bf.getDataFrame(data)
 ## Change book name to full word from initial
 df['book']=df['book'].replace({'창':'창세기','계':'요한계시록'})
 
+## test one more time
+
 
 # 생각보다 오래걸려서 dataframe 피클 시켜두고, 재사용시 dataframe 명령 주석처리 하고 pkl 사용 
 df.to_pickle('./bible.pkl')
