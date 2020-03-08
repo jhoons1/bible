@@ -2,8 +2,13 @@
 
 + 성경 통독을 돕기 위한 html 생성 프로젝트입니다.
 
-## 코드 구조 
-+ (Mar, 8th, 2020 기준): 성경 txt 파일 받아서, 파싱해서, 티스토리에 붙일 html 생성 -> 가독성 향상!  
+## current version  
++ (Mar, 8th, 2020 기준): 
+  * 성경 txt 파일 받아서, 파싱해서, 티스토리에 붙일 html 생성 -> 가독성 향상! 
+  * [기존](https://jhoons.tistory.com/108)에 복붙으로 생성한 페이지가 넘 읽기 힘들어서,
+  * 지금은 [이렇게](https://jhoons.tistory.com/109) 까지는 가독성을 향상시켰슴다.
+  * 아래 코드 블럭은 `main.py` 구조.
+  
 ``` python
 import pandas as pd 
 import bibleFunction as bf
