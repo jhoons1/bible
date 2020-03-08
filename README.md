@@ -2,7 +2,7 @@
 
 + 성경 통독을 돕기 위한 html 생성 프로젝트입니다.
 
-## current version  
+## Current version  
 + (Mar, 8th, 2020 기준): 
   * 성경 txt 파일 받아서, 파싱해서, 티스토리에 붙일 html 생성 -> 가독성 향상! 
   * [기존](https://jhoons.tistory.com/108)에 복붙으로 생성한 페이지가 넘 읽기 힘들어서,
@@ -41,7 +41,7 @@ print(html)
 # 코드 돌리고 나면 macOS clip보드에 붙이려고 하는데 잘 안됨..
 subprocess.run("pbcopy", universal_newlines=True, input=html)  
 ```  
-## next version?
+## Next version?
 1. dataframe속의 book이름이 지금은 '사사기'를 '삿'처럼 한글자 혹은 '열왕기상'을 '왕상'처럼 두글자로 정리되어 있는데, 이를 풀네임으로 변경하기
 2. 텍스트 파일 버전보다, 조금더 깔끔하게 정리된 데이터 베이스 찾아서 업데이트하기
 3. 구절별 like 기능도 넣을 수 있나?
