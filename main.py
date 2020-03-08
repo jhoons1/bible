@@ -4,6 +4,7 @@ import tistory as ts
 import subprocess 
 
 # git
+# zjzjzjzjzj
 # book 이름과 chapter 리스트를 입력받음. 
 request = {'book':'삿', 'chapter':['1','2','3']}
 
