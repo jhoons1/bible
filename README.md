@@ -7,7 +7,7 @@
   * 가독성 향상! 
   * 성경 mdb 파일 받아서, pandas DataFrame으로 변환, 데이터 클리닝해서, 티스토리에 붙일 html 생성!  
   * [기존](https://jhoons.tistory.com/108)에 복붙으로 생성한 페이지가 넘 읽기 힘들어서,
-  * 지금은 [이렇게](https://jhoons.tistory.com/1015)까지 만들었습니다.
+  * 지금은 [이렇게](https://jhoons.tistory.com/115)까지 만들었습니다.
   * 아래 코드 블럭은 `main.py` 구조.
   
 ``` python
