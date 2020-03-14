@@ -38,6 +38,6 @@ subprocess.run("pbcopy", universal_newlines=True, input=html)
 1. 구절별 like 기능도 넣을 수 있나?
 2. 현재는 html블럭을 만들어서 tistory에 붙여넣고 있는데, github static webstie (=jekyll)로 바꿀 수 있나? 티스토리의 유튜브링크 기능, 이미지 게시 기능을 구현할 수 있으면 전용웹을 만드는 것도 좋을 것 같음. 
 3. 월별 통독표를 가지고 자동으로 html 페이지를 생성해줄 수 있게?
-4. 확 앱을 만들어 버려?
+4. 확 앱을 만들어 버려? Swift 프로젝트 고고싱!
 
 
