@@ -1,74 +1,71 @@
 import pandas as pd
 
-def getHTMLdoc(df, req):
+def getHTMLdoc(dfList, req):
 
 
-	dfBook = df[ df['book'] == req['book'] ]
+    dfChapsList = []
 
-	dfChaps = dfBook[ dfBook['chapter'].isin(req['chapter']) ]
+    for dfInd, df in enumerate(dfList):
 
-	finalHTMLtxt = ''
+        dfBook = df[ df['book'] == req['book'] ]
 
-	for index, line in dfChaps.iterrows():
-		finalHTMLtxt += generateHtmlLine(line) 
+        dfChaps = dfBook[ dfBook['chapter'].isin(req['chapter']) ]
 
-	return finalHTMLtxt
+        dfChapsList += [dfChaps]
+
+    finalHTMLtxt = ''
+
+    lenChaps = [ item.shape[0] for item in dfChapsList ]
+    maxlen = max(lenChaps)
+
+    for index in range(maxlen):
+        for dfInd, dfChaps in enumerate(dfChapsList):
+            finalHTMLtxt += generateHtmlLine(dfChaps.iloc[index])
+
+    return finalHTMLtxt
 
 
 def generateHtmlLine(line):
 
-	#verseRow = 
-	#{'book': book,'chapter':chapter,'verse':verseNum,
-	# 'verseTitle':verseTitle,'sentence':sentence,
-	# 'comments':comments,'comLocs':comLocs}
+    #verseRow = 
+    #{'book': book,'chapter':chapter,'verse':verseNum,
+    # 'verseTitle':verseTitle,'sentence':sentence,
+    # 'comments':comments,'comLocs':comLocs}
 
-	book = line.book
-	chapter = line.chapter
-	verse = line.verse
-	verseTitle = line.verseTitle
-	sentence = line.sentence
-	comments = line.comments
-	comLocs = line.comLocs
-	comList = line.comList
+    #verseRow = 
+    # [ 'index', 'book', 'chapter', 'verseTitle', 'verse', 'sentence', 'etc', 'key']
 
-	HtmlLine =  ''
-	
-	if verse == '1':
-		chapterHTML = '<p><span><h4 data-ke-size="size20"><b>' + '사사기' + '&nbsp;' + chapter +'장'+ '</b></h4></span>' + '<p>&nbsp;</p>'
-		HtmlLine += chapterHTML
+    version = line.version
 
+    book = line.book
+    chapter = line.chapter
+    verseTitle = line.verseTitle
+    verse = line.verse
+    sentence = line.sentence
+    etc = line.etc
+    key = line.key
 
-	if verseTitle != '':
-		verseTitleHTML = '<p><span><b>' + verseTitle + '</b></span></p>' + '<p>&nbsp;</p>'
-		HtmlLine += verseTitleHTML
-
-
-	newSentence = sentence
-	if comList != []:
-		for com in comList: 
-			newSentence = ' '.join(newSentence.split(com))
-		sentence = newSentence
-
-	if sentence != '':
-		sentenceHTML = '<p><span>' + verse + '&nbsp;' + sentence + '</span></p>' + '<p>&nbsp;</p>'
-		HtmlLine += sentenceHTML
+    HtmlLine =  ''
+    
+    if verse == '1' and version == 'FinalBibleStandard':
+        lineHTML = '<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />'
+        chapterHTML = '<p><span><h4 data-ke-size="size20"><b>' + book + '&nbsp;' + chapter +'장'+ '</b></h4></span>' + '<p>&nbsp;</p>'
+        HtmlLine += lineHTML + chapterHTML
 
 
-	return HtmlLine
+    if verseTitle != '' and version == 'FinalBibleStandard':
+        verseTitleHTML = '<p><span><b>' + verseTitle + '</b></span></p>' + '<p>&nbsp;</p>'
+        HtmlLine += verseTitleHTML
 
 
+    if sentence != '' and version == 'FinalBibleStandard':
+        sentenceHTML = '<p><span>' + verse + '&nbsp;' + sentence + '</span></p>'
+        HtmlLine += sentenceHTML
+
+    if sentence != '' and version == 'FinalBibleNIV':
+        sentenceHTML = '<p><span style="color: #7e98b1;">' + '<i>( ' + sentence + ')</i>' + '</span></p>' + '<p>&nbsp;</p>'
+        HtmlLine += sentenceHTML
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    return HtmlLine
 

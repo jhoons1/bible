@@ -1,35 +1,20 @@
 import pandas as pd
 import bibleFunction as bf
 import tistory as ts
-import subprocess 
+import subprocess
 
-# git
-# book 이름과 chapter 리스트를 입력받음. 
-request = {'book':'삿', 'chapter':['1','2','3']}
+# 성격판본, book 이름, chapter 리스트를 입력받음.
+# version 선택지: 새번역, 개역개정, NIV
 
-# 새번역본 성경 텍스트를 입력 받음.
-bibleFile = "SaeBunYuk.txt"
+request = {	'version':['새번역','NIV'], 
+			'book':'룻기', 
+			'chapter':['1','2','3','4']}
 
-# bibleFunction.py에 있는 bibleRead method로 string object 생성
-data = bf.bibleRead(bibleFile)
+# DataFrame 해당 버전 가져오기
+dfList = bf.getDataFrame(request)
 
-# pandas Dataframe 생성
-df = bf.getDataFrame(data)
-
-## Change book name to full word from initial
-df['book']=df['book'].replace({'창':'창세기','계':'요한계시록'})
-
-## test one more time
-
-
-# 생각보다 오래걸려서 dataframe 피클 시켜두고, 재사용시 dataframe 명령 주석처리 하고 pkl 사용 
-df.to_pickle('./bible.pkl')
-
-# pkl 읽기
-df = pd.read_pickle('./bible.pkl')
-
-# df에서 티스토리에 복붙할 html 코드 생성 
-html = ts.getHTMLdoc(df, request)
+# df에서 티스토리에 복붙할 html 코드 생성
+html = ts.getHTMLdoc(dfList, request)
 
 print(html)
 
