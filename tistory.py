@@ -59,10 +59,10 @@ def generateHtmlLine(line):
 
 
     if sentence != '' and version == 'FinalBibleStandard':
-        sentenceHTML = '<p><span>' + verse + '&nbsp;' + sentence + '</span></p>'
+        sentenceHTML = '<p><span>' +  chapter +':' + verse + '&nbsp;' + sentence + '</span></p>'
         HtmlLine += sentenceHTML
 
-    if sentence != '' and version == 'FinalBibleNIV':
+    if sentence != '' and version == 'FinalBibleNIVSorted':
         sentenceHTML = '<p><span style="color: #7e98b1;">' + '<i>( ' + sentence + ')</i>' + '</span></p>' + '<p>&nbsp;</p>'
         HtmlLine += sentenceHTML
 

@@ -2,7 +2,7 @@ import pandas as pd
 
 def getDataFrame(request):
 
-    tblNames = {'새번역':'FinalBibleStandard','개역개정':'FinalBibleRevision','NIV':'FinalBibleNIV'}
+    tblNames = {'새번역':'FinalBibleStandard','개역개정':'FinalBibleRevision','NIV':'FinalBibleNIVSorted'}
 
     dfList = []
     for version in request['version']:
