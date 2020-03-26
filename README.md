@@ -3,11 +3,11 @@
 + 성경 통독을 돕기 위한 html 생성 프로젝트입니다.
 
 ## Current version  
-+ (Mar, 14th, 2020 기준): 
++ (Mar, 17th, 2020 기준): 
   * 가독성 향상! 
   * 성경 mdb 파일 받아서, pandas DataFrame으로 변환, 데이터 클리닝해서, 티스토리에 붙일 html 생성!  
   * [기존](https://jhoons.tistory.com/108)에 복붙으로 생성한 페이지가 넘 읽기 힘들어서,
-  * 지금은 [이렇게](https://jhoons.tistory.com/115)까지 만들었습니다.
+  * 지금은 [이렇게](https://jhoons.tistory.com/117)까지 만들었습니다.
   * 아래 코드 블럭은 `main.py` 구조.
   
 ``` python
@@ -20,8 +20,8 @@ import subprocess
 # version 선택지: 새번역, 개역개정, NIV
 
 request = { 'version':['새번역','NIV'], 
-            'book':'룻기', 
-            'chapter':['1','2','3','4']}
+            'book':'사무엘상', 
+            'chapter':['4','5','6','7','8']}
 
 # DataFrame 해당 버전 가져오기
 dfList = bf.getDataFrame(request)
@@ -31,7 +31,7 @@ html = ts.getHTMLdoc(dfList, request)
 
 print(html)
 
-# 코드 돌리고 나면 macOS clip보드에 붙이려고 하는데 잘 안됨..
+# 코드 돌리고 나면 macOS clip보드에 붙이기.
 subprocess.run("pbcopy", universal_newlines=True, input=html)
 ```  
 ## Next version?
