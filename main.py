@@ -7,8 +7,10 @@ import subprocess
 # version 선택지: 새번역, 개역개정, NIV
 
 request = {	'version':['새번역','NIV'], 
-			'book':'사무엘상', 
-			'chapter':['4','5','6','7','8']}
+			'book':'사무엘하', 
+			'chapter':['5','6','7'],
+			'youtubeVD':[''],
+			'youtubePL':[''],}
 
 # DataFrame 해당 버전 가져오기
 dfList = bf.getDataFrame(request)

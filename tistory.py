@@ -25,6 +25,19 @@ def getHTMLdoc(dfList, req):
     return finalHTMLtxt
 
 
+
+def getYoutubeVD(req):
+    req['youtubeVD']
+
+
+def getYoutbePL(req):
+    playlist = req['youtubePL']
+    line = '<p><iframe width="50%" height="50" src="' +
+           'https://www.youtube.com/embed/videoseries?list='+
+           playlist+
+           '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe></p>'
+
+
 def generateHtmlLine(line):
 
     #verseRow = 
