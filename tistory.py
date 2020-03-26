@@ -15,6 +15,13 @@ def getHTMLdoc(dfList, req):
 
     finalHTMLtxt = ''
 
+
+    #header
+    finalHTMLtxt += getImage()
+    finalHTMLtxt += getYoutubeVD(request)
+    finalHTMLtxt += getYoutbePL(request)
+
+
     lenChaps = [ item.shape[0] for item in dfChapsList ]
     maxlen = max(lenChaps)
 
@@ -27,8 +34,9 @@ def getHTMLdoc(dfList, req):
 
 
 def getYoutubeVD(req):
-    req['youtubeVD']
-
+    video = req['youtubeVD']
+    line = '<p>&nbsp;</p><figure data-ke-type="video" data-ke-style="alignCenter" data-video-host="youtube" data-video-url="https://www.youtube.com/watch?v='+video+'" data-video-thumbnail="https://scrap.kakaocdn.net/dn/lDSO6/hyFqPKXn2c/CSj3wGUD4NUk1dgSn0CGMK/img.jpg?width=480&amp;height=360&amp;face=0_0_480_360" data-video-width="480" data-video-height="360"><iframe src='+'"https://www.youtube.com/embed/'+video+'"'+' width="480" height="360" frameborder="0" allowfullscreen="true"></iframe><figcaption>바이블 프로젝트 영상</figcaption></figure>'
+    return line
 
 def getYoutbePL(req):
     playlist = req['youtubePL']
@@ -36,7 +44,12 @@ def getYoutbePL(req):
            'https://www.youtube.com/embed/videoseries?list='+
            playlist+
            '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe></p>'
+    return line
 
+def getImage():
+    image = 'https://github.com/jhoons1/bible/blob/master/image/holybible.jpg'
+    line = '<img src='+image+' alt="Smiley face" height="42" width="42">'
+    return line
 
 def generateHtmlLine(line):
 
@@ -59,6 +72,9 @@ def generateHtmlLine(line):
     key = line.key
 
     HtmlLine =  ''
+
+
+
     
     if verse == '1' and version == 'FinalBibleStandard':
         lineHTML = '<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />'
