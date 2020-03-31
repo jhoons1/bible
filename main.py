@@ -8,9 +8,12 @@ import subprocess
 
 request = {	'version':['새번역','NIV'], 
 			'book':'사무엘하', 
-			'chapter':['5','6','7'],
-			'youtubeVD':['"https://www.youtube.com/embed/YRknnGDQoGI"'],
-			'youtubePL':['PLSxgV0wm_C1Ec5uzJtGxR1s9Wcj4ThHWv'],}
+			'chapter':['20','21','22','23','24'],
+			'Title':'다윗의 마지막 행적',
+			'image':'사무엘',
+			'youtubeVD':[''],
+			'youtubePL':'PL4VTUAu7KYyP-bOseTxDowKpV_Lt_2_1i',}
+
 
 # DataFrame 해당 버전 가져오기
 dfList = bf.getDataFrame(request)
