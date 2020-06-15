@@ -48,6 +48,19 @@ def getImage(req):
     line = ''
     if image == '사무엘':
         line += '<p>[##_Image|kage@ckDtw8/btqCWLsKT4G/vK8qIM5wiIKLmeYjvRlU40/img.jpg|alignCenter|data-filename="11-12-Samuel-FNL.jpg" data-origin-width="5950" data-origin-height="3850"|바이블 프로젝트 사무엘서 포스터||_##]</p>' 
+    elif image == '열왕기':
+        line += '<p>[##_Image|kage@sDc60/btqC7rULVAG/HfkYZoZxSnAYBk2VsFLfn1/img.jpg|alignCenter|data-filename="13-14-Kings-FNL.jpg" data-origin-width="5950" data-origin-height="3850"|바이블 프로젝트 열왕기서 포스터||_##]</p>'
+    elif image =='역대기':
+        line += '<p>[##_Image|kage@bG7uWK/btqDpe9j6Ep/gEyO76s2TlGBrS7cpSxRGK/img.jpg|alignCenter|data-filename="41-Chronicles-FNL.jpg" data-origin-width="5950" data-origin-height="3850"|바이블 프로젝트 역대기 포스터||_##]</p>'
+    elif image =='에스겔느헤미야':
+        line += '<p>[##_Image|kage@dqisLR/btqDPLehc4j/sDvJzFR2S7XvaVgGLD4K30/img.jpg|alignCenter|data-filename="15-Ezra-Nehemiah-FNL.jpg" data-origin-width="5950" data-origin-height="3850"|||_##]</p>'
+    elif image =='에스더':
+        line += '<p>[##_Image|kage@b9Q2ZV/btqD6QMbbjV/pF04mCWY9sKd6nKL7B3Ff1/img.jpg|alignCenter|data-filename="16-Esther-FNL.jpg" data-origin-width="5950" data-origin-height="3850"|바이블프로젝트 에스더 포스터||_##]</p>'
+    elif image =='욥기':
+        line += '<p>[##_Image|kage@czQx4S/btqEdxzX6kg/znP3g6DnYWkT8Fs03L43Xk/img.jpg|alignCenter|data-filename="17-Job-FNL.jpg" data-origin-width="5950" data-origin-height="3850"|||_##]</p>'
+    elif image =='시편':
+        line += '<p>[##_Image|kage@wf3o1/btqEyKlKgUG/ESZYJ0z9ipV6saokfS8S61/img.jpg|alignCenter|data-filename="18-Psalms-FNL.jpg" data-origin-width="5950" data-origin-height="3850" data-ke-mobilestyle="widthContent"|||_##]</p>'
+
     return line
 
 def getYoutubeVD(req):
