@@ -60,7 +60,18 @@ def getImage(req):
         line += '<p>[##_Image|kage@czQx4S/btqEdxzX6kg/znP3g6DnYWkT8Fs03L43Xk/img.jpg|alignCenter|data-filename="17-Job-FNL.jpg" data-origin-width="5950" data-origin-height="3850"|||_##]</p>'
     elif image =='시편':
         line += '<p>[##_Image|kage@wf3o1/btqEyKlKgUG/ESZYJ0z9ipV6saokfS8S61/img.jpg|alignCenter|data-filename="18-Psalms-FNL.jpg" data-origin-width="5950" data-origin-height="3850" data-ke-mobilestyle="widthContent"|||_##]</p>'
-
+    elif image =='예레미야':
+        line += '<p>[##_Image|kage@P9FVP/btqGcgCMZYJ/94VRAetc9sJAeecvd6Zbsk/img.jpg|alignCenter|data-filename="24-Jeremiah-FNL.jpg" data-origin-width="5950" data-origin-height="3850" data-ke-mobilestyle="widthContent"|||_##]</p>'
+    elif image =='에스겔':
+        line += '<p>[##_Image|kage@VwdBi/btqGHMOsJ5S/TBDCi939mWwQt6v6yLjf80/img.jpg|alignCenter|data-filename="26-27-Ezekiel-FNL.jpg" data-origin-width="5950" data-origin-height="3850" data-ke-mobilestyle="widthContent"|||_##]</p>'
+    elif image =='미가':
+        line += '<p>[##_Image|kage@AQxqB/btqITuKp9e3/cdZzvmcAGR7HWAkHtWP0Hk/img.jpg|alignCenter|data-filename="34-Micah-FNL.jpg" data-origin-width="5950" data-origin-height="3850" data-ke-mobilestyle="widthContent"|||_##]</p>'
+    elif image =='스가랴':
+        line += '<p>[##_Image|kage@sfQah/btqJoLff6aT/6uokGghpG9hl9ONWMHdCE1/img.jpg|alignCenter|data-filename="39-Zechariah-FNL.jpg" data-origin-width="5950" data-origin-height="3850" data-ke-mobilestyle="widthContent"|||_##]</p>'
+    elif image =='말라기':
+        line += '<p>[##_Image|kage@cHOPoZ/btqJU5jJTzb/71FRCEU7QL6LXotFqUOrBk/img.jpg|alignCenter|data-origin-width="5950" data-origin-height="3850" data-filename="40-Malachi-FNL.jpg" data-ke-mobilestyle="widthContent"|||_##]</p>'
+    elif image =='마태복음':
+        line += '<p>[##_Image|kage@bipU30/btqJWsTxmeE/doK97ZqmKDVhDUrgTa1jok/img.jpg|alignCenter|data-filename="42-Matthew-FNL-1.jpg" data-origin-width="5950" data-origin-height="3850" data-ke-mobilestyle="widthContent"|||_##]</p>'
     return line
 
 def getYoutubeVD(req):

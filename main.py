@@ -5,15 +5,13 @@ import subprocess
 
 # 성격판본, book 이름, chapter 리스트를 입력받음.
 # version 선택지: 새번역, 개역개정, NIV
-
 request = {	'version':['새번역','NIV'], 
-			'book':'시편', 
-			'chapter':['67','68','69','70','71'],
-			'Title':'도우시는 하나님',
-			'image':'시편',
+			'book':'마태복음', 
+			'chapter':['24','25'],
+			'Title':'왕의 도성에 입성',
+			'image':'마태복음',
 			'youtubeVD':[''],
-			'youtubePL':'PL4VTUAu7KYyMD7EwHyW8hLIbDk2mi1k-j',}
-
+			'youtubePL':'PL4VTUAu7KYyP6csF_umUueqmHv_OB_E-X',}
 # DataFrame 해당 버전 가져오기
 dfList = bf.getDataFrame(request)
 
